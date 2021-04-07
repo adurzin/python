@@ -1,6 +1,11 @@
-list_1 = input("Введите элементы списка через пробел: ").split()
+def func(name, surname, age, city, email, phone):
+    return f"name - {name}, surname - {surname}, age - {age}, " \
+           f"city - {city}, email - {email}, phone - {phone}"
 
-for i in range(1, len(list_1), 2):
-    list_1[i], list_1[i - 1] = list_1[i - 1], list_1[i]
 
-print(list_1)
+print(func(name=input("Ваше имя: "),
+           surname=input("Фамилия: "),
+           age=int(input("Год рождения: ")),
+           city=input("Город проживания: "),
+           email=input("E-mail: "),
+           phone=input("Телефон: ")))

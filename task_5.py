@@ -1,13 +1,20 @@
-my_list = [7, 5, 3, 3, 2]
+def my_func(list_1):
+    my_sum = 0
+    for i in list_1:
+        try:
+            my_sum += int(i)
+        except ValueError:
+            return my_sum
+        else:
+            return my_sum
 
-user_input = int(input("Введите элемент рейтинга: "))
 
-if user_input <= my_list[len(my_list) - 1]:
-    my_list.append(user_input)
-else:
-    i = 0
-    while user_input <= my_list[i]:
-        i += 1
-    my_list.insert(i, user_input)
-
-print(my_list)
+answer = 0
+my_list = []
+print("Введите строку чисел, разделенных пробелом и нажмите Enter.\n"
+      "Если вы хотите прекратить работу программы введите символ - q.")
+while "q" not in my_list:
+    my_list = input().split()
+    sum_list = my_func(my_list)
+    answer += sum_list
+    print(f"{answer}({sum_list})")
