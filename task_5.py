@@ -6,7 +6,8 @@ def my_func(list_1):
         except ValueError:
             return my_sum
         else:
-            return my_sum
+            pass
+    return my_sum
 
 
 answer = 0
